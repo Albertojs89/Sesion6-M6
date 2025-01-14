@@ -25,16 +25,20 @@ function App() {
       <div className="container-fluid">
         <h2>Sesión 6 Ejemplos</h2>
         <h3>Usestate</h3>
+        {/* Contador */}
         <Contador />
         <h3>Cambio de color</h3>
         <div>
+          {/* Cambio de color de caja */}
           <CambioColor />
         </div>
         <div>
+          {/* Props saludo */}
           <h2>Props Tutorial</h2>
           <Saludo mensaje="¡Hola, React desde App!" />
         </div>
         <div>
+          {/* Props lista de usuarios */}
           <h1>Lista de Usuarios</h1>
           <Usuario nombre="Juan" edad={30} />
           <Usuario nombre="Ana" edad={25} />
@@ -57,6 +61,7 @@ function App() {
       </div>
       {/* Productos */}
       <div style={{ padding: "20px" }}>
+        {/* props Productos */}
         <h1>Lista de Productos</h1>
         {productos.map((producto, index) => (
           <Producto
