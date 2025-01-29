@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón Unirse</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            background-color: #e5e7eb;
+            border-radius: 25px;
+            padding: 10px 15px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            overflow: hidden;
+            position: relative;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .button:hover {
+            background-color: #0077aa;
+        }
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #0077aa;
+            transition: left 0.3s ease-in-out;
+        }
+        .button:hover::before {
+            left: 0;
+        }
+        .button span {
+            position: relative;
+            z-index: 1;
+        }
+        .flecha-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #00bfff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-left: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .flecha {
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 4px;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease-in-out;
+        }
+        .flecha.duplicada {
+            position: absolute;
+            left: -100%;
+            opacity: 0;
+            transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .button:hover .flecha {
+            transform: translateX(10px) rotate(-45deg);
+        }
+        .button:hover .flecha.duplicada {
+            left: 50%;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="button">
+        <span>Unirse</span>
+        <span class="flecha-container">
+            <i class="flecha"></i>
+            <i class="flecha duplicada"></i>
+        </span>
+    </a>
+</body>
+</html>
