@@ -9,7 +9,7 @@ import Usuario from './components/Usuario';
 import PersonaCard from './components/PersonaCard';
 import productos from './data/productos';
 import Producto from './components/Producto';
-
+import OcultarTexto from './components/OcultarTexto';
 
 
 function App() {
@@ -71,6 +71,11 @@ function App() {
             precio={producto.precio}
           />
         ))}
+      </div>
+      {/* Ocultar Texto */}
+      <div>
+        <h1>Ocultar Texto</h1>
+        <OcultarTexto />
       </div>
     </>
   );
